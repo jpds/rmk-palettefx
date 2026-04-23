@@ -1,0 +1,23 @@
+name = "Sport"
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [156, 102,  51],
+    [155, 102,  68],
+    [155, 102,  68],
+    [154, 102,  68],
+    [155, 102,  85],
+    [156,  85, 102],
+    [158,  68, 119],
+    [159,  51, 136],
+    [158,  17, 153],
+    [130,   0, 170],
+    [ 49,  17, 204],
+    [ 42,  51, 238],
+    [ 39,  85, 255],
+    [ 37, 119, 255],
+    [ 36, 170, 255],
+    [ 36, 255, 255],
+]

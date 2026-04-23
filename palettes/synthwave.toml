@@ -1,0 +1,23 @@
+name = "Synthwave"
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [170, 221, 119],
+    [180, 221, 153],
+    [196, 238, 153],
+    [209, 255, 153],
+    [220, 255, 170],
+    [227, 255, 204],
+    [233, 255, 238],
+    [245, 204, 255],
+    [  3, 170, 255],
+    [ 13, 187, 255],
+    [ 21, 204, 255],
+    [ 28, 221, 255],
+    [ 43, 255, 255],
+    [ 42, 255, 255],
+    [ 68,  68, 255],
+    [132, 255, 255],
+]

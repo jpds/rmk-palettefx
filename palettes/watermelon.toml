@@ -1,0 +1,23 @@
+name = "Watermelon"
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [ 67, 255, 102],
+    [ 55, 255, 153],
+    [ 47, 255, 204],
+    [ 48, 136, 238],
+    [ 48,  68, 255],
+    [ 45,  34, 255],
+    [ 39,  34, 255],
+    [ 17,  85, 255],
+    [  8, 187, 255],
+    [  1, 255, 255],
+    [  2, 238, 255],
+    [  2, 238, 255],
+    [  0, 238, 255],
+    [253, 255, 238],
+    [254, 255, 238],
+    [255, 255, 221],
+]

@@ -1,0 +1,24 @@
+name = "Viridis"
+credit = "Inspired by the Viridis colormap by Stefan van der Walt and Nathaniel Smith (CC0)."
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [204, 221, 102],
+    [194, 187, 119],
+    [183, 153, 136],
+    [169, 119, 153],
+    [155, 153, 153],
+    [145, 170, 153],
+    [137, 187, 153],
+    [130, 204, 153],
+    [123, 221, 153],
+    [117, 221, 170],
+    [108, 187, 187],
+    [ 93, 153, 204],
+    [ 71, 170, 221],
+    [ 56, 221, 221],
+    [ 46, 255, 238],
+    [ 39, 255, 255],
+]

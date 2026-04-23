@@ -1,0 +1,24 @@
+name = "Dracula"
+credit = "Inspired by the Dracula theme by Zeno Rocha (MIT)."
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [165, 153, 119],
+    [167, 153, 136],
+    [170, 170, 187],
+    [173, 170, 221],
+    [177, 170, 238],
+    [183, 170, 255],
+    [190, 170, 255],
+    [200, 153, 255],
+    [216, 153, 255],
+    [230, 170, 255],
+    [  2, 153, 255],
+    [ 29, 153, 238],
+    [ 44, 255, 255],
+    [ 53, 238, 255],
+    [ 63, 238, 238],
+    [ 85, 238, 238],
+]

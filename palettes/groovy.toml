@@ -1,0 +1,24 @@
+name = "Groovy"
+credit = "Inspired by the Gruvbox theme by Pavel Pertsev (MIT/X11)."
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [ 26, 136, 187],
+    [ 23,  85, 102],
+    [ 21,  85,  85],
+    [ 21,  85,  85],
+    [ 21,  85,  85],
+    [ 17, 102, 102],
+    [  5, 204, 255],
+    [  4, 255, 255],
+    [  4, 255, 255],
+    [  7, 204, 255],
+    [ 23, 136, 187],
+    [ 26, 136, 187],
+    [ 28, 136, 187],
+    [ 50, 238, 238],
+    [ 54, 255, 238],
+    [ 54, 255, 238],
+]

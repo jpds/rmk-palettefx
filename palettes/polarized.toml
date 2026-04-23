@@ -1,0 +1,24 @@
+name = "Polarized"
+credit = "Inspired by the Solarized theme by Ethan Schoonover (MIT)."
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [139, 255,  68],
+    [139, 221,  85],
+    [139, 204, 102],
+    [138, 204, 119],
+    [137, 204, 136],
+    [137, 187, 170],
+    [137, 153, 187],
+    [132, 170, 187],
+    [126, 187, 238],
+    [124, 102, 255],
+    [124, 102, 255],
+    [124, 187, 255],
+    [130, 170, 204],
+    [137, 153, 187],
+    [137, 153, 204],
+    [137, 136, 221],
+]

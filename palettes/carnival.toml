@@ -1,0 +1,23 @@
+name = "Carnival"
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [132, 255,  85],
+    [121, 187,  85],
+    [108, 170, 102],
+    [ 90, 153, 119],
+    [ 70, 187, 136],
+    [ 57, 255, 153],
+    [ 50, 255, 187],
+    [ 44, 255, 204],
+    [ 39, 255, 238],
+    [ 32, 255, 255],
+    [ 27, 255, 255],
+    [ 22, 255, 255],
+    [ 18, 255, 255],
+    [  8, 221, 238],
+    [252, 204, 238],
+    [241, 255, 221],
+]

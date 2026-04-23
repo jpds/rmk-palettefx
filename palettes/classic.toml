@@ -1,0 +1,23 @@
+name = "Classic"
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [150, 255,  85],
+    [151, 238, 119],
+    [160, 136, 119],
+    [176, 102, 136],
+    [193,  85, 136],
+    [216,  85, 136],
+    [234, 102, 153],
+    [247, 119, 187],
+    [  3, 153, 204],
+    [ 10, 204, 221],
+    [ 15, 255, 255],
+    [ 18, 255, 255],
+    [ 23, 255, 255],
+    [ 24, 204, 255],
+    [ 25, 136, 255],
+    [ 26,  85, 255],
+]

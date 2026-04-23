@@ -1,0 +1,24 @@
+name = "Bad Wolf"
+credit = "Inspired by the Bad Wolf Vim theme by Steve Losh (MIT/X11)."
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [ 14,  34,   0],
+    [245, 255, 255],
+    [245, 255, 255],
+    [245, 255, 255],
+    [ 14,  34,   0],
+    [ 14,  34,   0],
+    [ 14,  34,   0],
+    [ 14,  34,   0],
+    [ 14,  34,   0],
+    [ 14,  34,   0],
+    [ 24,  17, 136],
+    [ 28,   0, 255],
+    [ 24,  17, 136],
+    [ 14,  34,   0],
+    [ 14,  34,   0],
+    [ 14,  34,   0],
+]

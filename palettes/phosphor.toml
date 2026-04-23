@@ -1,0 +1,23 @@
+name = "Phosphor"
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [116, 102,  34],
+    [113, 170,  51],
+    [113, 255,  68],
+    [110, 255,  68],
+    [109, 255,  85],
+    [105, 255, 102],
+    [ 95, 238, 102],
+    [ 85, 238, 119],
+    [ 84, 255, 136],
+    [ 84, 255, 153],
+    [ 83, 255, 187],
+    [ 80, 238, 204],
+    [ 69, 221, 238],
+    [ 46, 204, 255],
+    [ 42, 153, 255],
+    [ 40, 102, 255],
+]

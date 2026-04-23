@@ -1,0 +1,23 @@
+name = "Not Pink"
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [  9, 255, 153],
+    [  3, 221, 187],
+    [252, 204, 187],
+    [248, 204, 187],
+    [247, 187, 204],
+    [245, 187, 238],
+    [244, 170, 255],
+    [245, 153, 255],
+    [252, 102, 255],
+    [ 16,  68, 255],
+    [ 40,  34, 255],
+    [ 32,  51, 255],
+    [  6,  85, 255],
+    [248, 136, 255],
+    [247, 187, 255],
+    [249, 221, 255],
+]

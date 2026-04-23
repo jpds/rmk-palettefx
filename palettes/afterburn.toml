@@ -1,0 +1,23 @@
+name = "Afterburn"
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [139, 255,  85],
+    [134, 255,  85],
+    [131, 255, 102],
+    [128, 255, 102],
+    [127, 187, 102],
+    [125, 119, 102],
+    [124,  51, 102],
+    [125,   0, 119],
+    [ 15,  17, 119],
+    [ 17,  51, 153],
+    [ 18, 102, 170],
+    [ 19, 153, 204],
+    [ 21, 187, 238],
+    [ 23, 238, 255],
+    [ 26, 255, 255],
+    [ 30, 255, 255],
+]

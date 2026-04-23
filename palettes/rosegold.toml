@@ -1,0 +1,23 @@
+name = "Rose Gold"
+
+# Each entry: [hue, saturation, value] - 0..=255. At build time
+# saturation/value are rounded to the nearest multiple of 17
+# (the 4-bit HSV16 on-device format has 16 levels per channel).
+stops = [
+    [246, 255, 204],
+    [250, 238, 221],
+    [253, 221, 238],
+    [  1, 221, 255],
+    [  6, 221, 255],
+    [ 12, 221, 255],
+    [ 18, 204, 255],
+    [ 22, 170, 255],
+    [ 20, 204, 255],
+    [ 17, 221, 255],
+    [ 12, 221, 255],
+    [  7, 221, 255],
+    [255, 204, 255],
+    [248, 204, 255],
+    [241, 238, 255],
+    [235, 255, 255],
+]
