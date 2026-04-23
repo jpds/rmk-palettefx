@@ -14,7 +14,7 @@ mod vortex;
 pub use flow::FlowState;
 pub use gradient::gradient;
 pub use reactive::{Hit, ReactiveState};
-pub use ripple::RippleState;
+pub use ripple::{Pcg32, RippleState};
 pub use sparkle::SparkleState;
 pub use vortex::VortexState;
 

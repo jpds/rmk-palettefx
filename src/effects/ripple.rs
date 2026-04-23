@@ -1,10 +1,17 @@
 //! RIPPLE: up to 3 radial drops with amplitude envelope.
 
+use rand_core::Rng;
+
 use super::FrameParams;
 use crate::color::Hsv;
 use crate::layout::LedLayout;
 use crate::math::{abs_half_diff, cos8, ease8_in_out_approx, scale8, scale16by8, sqrt16};
 use crate::palette::interp_color;
+
+/// Re-export of the default RNG for [`RippleState::tick_with_rng`].
+/// `Pcg32` is small and seedable; any [`Rng`](rand_core::Rng) impl
+/// works as a substitute.
+pub use rand_pcg::Pcg32;
 
 const RIPPLE_DROPS: usize = 3;
 const RIPPLE_SPAWN_INTERVAL_MS: u32 = 1000;
@@ -139,3 +146,22 @@ fn ripple_amplitude(t: u8) -> u8 {
         scale8(u as u8, u as u8)
     }
 }
+
+impl RippleState {
+    /// Convenience wrapper around [`RippleState::tick`] that accepts any
+    /// [`Rng`] for drop placement, sampling `rng.next_u32() as u8` per spawn.
+    pub fn tick_with_rng<L, R>(
+        &mut self,
+        rng: &mut R,
+        layout: &L,
+        params: FrameParams<'_>,
+        out: &mut [Hsv],
+    )
+    where
+        L: LedLayout,
+        R: Rng,
+    {
+        self.tick(layout, params, || rng.next_u32() as u8, out);
+    }
+}
+
