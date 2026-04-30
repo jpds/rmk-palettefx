@@ -156,12 +156,10 @@ impl RippleState {
         layout: &L,
         params: FrameParams<'_>,
         out: &mut [Hsv],
-    )
-    where
+    ) where
         L: LedLayout,
         R: Rng,
     {
         self.tick(layout, params, || rng.next_u32() as u8, out);
     }
 }
-
