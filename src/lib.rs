@@ -60,6 +60,7 @@
 #![forbid(unsafe_code)]
 
 pub mod color;
+pub mod effect_state;
 pub mod effects;
 pub mod layout;
 pub mod led_driver;
@@ -67,4 +68,5 @@ pub mod math;
 pub mod palette;
 pub mod time;
 
+pub use effect_state::EffectState;
 pub use led_driver::LedDriver;
