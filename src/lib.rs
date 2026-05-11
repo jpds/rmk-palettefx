@@ -70,3 +70,9 @@ pub mod time;
 
 pub use effect_state::EffectState;
 pub use led_driver::LedDriver;
+
+#[cfg(feature = "rmk")]
+pub mod processor;
+
+#[cfg(feature = "rmk")]
+pub use processor::{KeyToPos, PaletteFxProcessor};
