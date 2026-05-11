@@ -105,7 +105,34 @@ where
         self.effect = effect;
     }
 
-    async fn on_keyboard_event(&mut self, event: KeyboardEvent) {
+    /// Mutable access to the current effect. Useful for calling
+    /// [`EffectState::next`] / [`EffectState::prev`] / [`EffectState::record_hit`]
+    /// without unwrapping the variant manually.
+    pub fn effect_mut(&mut self) -> &mut EffectState<HITS> {
+        &mut self.effect
+    }
+
+    pub fn set_palette(&mut self, palette: &'static Palette) {
+        self.palette = palette;
+    }
+
+    pub fn set_speed(&mut self, speed: u8) {
+        self.speed = speed;
+    }
+
+    pub fn speed(&self) -> u8 {
+        self.speed
+    }
+
+    pub fn set_val(&mut self, val: u8) {
+        self.val = val;
+    }
+
+    pub fn val(&self) -> u8 {
+        self.val
+    }
+
+    pub async fn on_keyboard_event(&mut self, event: KeyboardEvent) {
         if !event.pressed {
             return;
         }
@@ -118,7 +145,7 @@ where
         }
     }
 
-    async fn poll(&mut self) {
+    pub async fn poll(&mut self) {
         let ms = Instant::now().as_millis() as u32;
         let params = FrameParams {
             palette: self.palette,

@@ -66,4 +66,32 @@ impl<const N_HITS: usize> EffectState<N_HITS> {
             s.record_hit(x, y, timer_ms);
         }
     }
+
+    /// Advance to the next effect in declaration order. `ripple_seed` is
+    /// only used when the new variant is [`Self::Ripple`]; for other
+    /// transitions it is ignored. Callers typically pass a millisecond
+    /// timer so successive Ripple cycles drop their first droplet in a
+    /// different place.
+    pub fn next(&mut self, ripple_seed: u64) {
+        *self = match self {
+            Self::Gradient => Self::flow(),
+            Self::Flow(_) => Self::ripple(ripple_seed),
+            Self::Ripple(_, _) => Self::sparkle(),
+            Self::Sparkle(_) => Self::vortex(),
+            Self::Vortex(_) => Self::reactive(),
+            Self::Reactive(_) => Self::Gradient,
+        };
+    }
+
+    /// Step backward through the same order as [`Self::next`].
+    pub fn prev(&mut self, ripple_seed: u64) {
+        *self = match self {
+            Self::Gradient => Self::reactive(),
+            Self::Reactive(_) => Self::vortex(),
+            Self::Vortex(_) => Self::sparkle(),
+            Self::Sparkle(_) => Self::ripple(ripple_seed),
+            Self::Ripple(_, _) => Self::flow(),
+            Self::Flow(_) => Self::Gradient,
+        };
+    }
 }
