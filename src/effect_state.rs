@@ -13,10 +13,6 @@ use crate::effects::{
 };
 use crate::layout::LedLayout;
 
-/// Default seed for the Ripple effect's internal RNG. Picked arbitrarily; any
-/// non-zero value works.
-const DEFAULT_RIPPLE_SEED: u64 = 0xA5A5_5A5A_DEAD_BEEF;
-
 /// All built-in effects, switchable at runtime.
 ///
 /// `N_HITS` is the per-frame hit history depth used by
@@ -35,12 +31,8 @@ impl<const N_HITS: usize> EffectState<N_HITS> {
         Self::Flow(FlowState::new())
     }
 
-    pub fn ripple_seeded(seed: u64) -> Self {
+    pub fn ripple(seed: u64) -> Self {
         Self::Ripple(RippleState::new(), Pcg32::new(seed, 0x0A02_BDBF_7BB3_C0A7))
-    }
-
-    pub fn ripple() -> Self {
-        Self::ripple_seeded(DEFAULT_RIPPLE_SEED)
     }
 
     pub fn sparkle() -> Self {

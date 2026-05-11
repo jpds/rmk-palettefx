@@ -23,7 +23,7 @@
 //! fn key_to_pos(row: u8, col: u8) -> Option<(u8, u8)> { /* board-specific */ }
 //!
 //! let layout = SliceLayout::new(POSITIONS);
-//! let mut fx = PaletteFxProcessor::<_, LEDS, 8>::new(
+//! let mut fx = PaletteFxProcessor::<_, _, LEDS, 8>::new(
 //!     my_driver, layout, EffectState::flow(), &CARNIVAL, key_to_pos,
 //! );
 //!
@@ -78,8 +78,9 @@ where
     D: LedDriver,
     L: LedLayout,
 {
-    /// Construct with full brightness/saturation and a mid speed. Tune via
-    /// [`Self::set_speed`] / [`Self::set_sat`] / [`Self::set_val`].
+    /// Construct with speed/sat/val defaulted to (128, 255, 255). Use
+    /// [`Self::set_speed`] / [`Self::set_val`] to override if the
+    /// hardware needs different defaults.
     pub fn new(
         driver: D,
         layout: L,
@@ -102,22 +103,6 @@ where
 
     pub fn set_effect(&mut self, effect: EffectState<HITS>) {
         self.effect = effect;
-    }
-
-    pub fn set_palette(&mut self, palette: &'static Palette) {
-        self.palette = palette;
-    }
-
-    pub fn set_speed(&mut self, speed: u8) {
-        self.speed = speed;
-    }
-
-    pub fn set_sat(&mut self, sat: u8) {
-        self.sat = sat;
-    }
-
-    pub fn set_val(&mut self, val: u8) {
-        self.val = val;
     }
 
     async fn on_keyboard_event(&mut self, event: KeyboardEvent) {
